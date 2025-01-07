@@ -2,10 +2,10 @@
   "hosting": {
     "public": "dist/gym/browser",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "headers": [
+    "rewrites": [
       {
-        "source": "**/*.mp4",
-        "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }

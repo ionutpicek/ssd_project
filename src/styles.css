@@ -6,8 +6,11 @@ body {
 
 /* Sidebar Layout */
 .header {
+  flex-direction: row;
+  align-items: center;
   text-align: center; /* Align text horizontally */
   margin: 20px 0; /* Add spacing around the header */
+  width: 100%; /* Full width */
 }
 
 /* Adjust Container Layout */
@@ -19,11 +22,53 @@ body {
 /* Sidebar Styling */
 .sidebar {
   width: 22%; /* Adjust sidebar width */
-  background-color: #007BFF; /* Blue background */
+  background-color: #FF8036; /* Orange background */
   height: 100vh;
   color: white;
   padding: 20px;
+  left: -12px;
+  position: fixed; /* Fix position to the left */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  height: calc(100% - 160px); /* Adjust height to account for border radius */
+}
+
+/* Right Sidebar Styling */
+.right-sidebar {
+  width: 22%; /* Adjust right sidebar width */
+  background-color: #FF8036; /* Same background color as left sidebar */
+  height: 100vh;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow on the left side */
+  position: fixed; /* Fix position to the right */
+  margin-left: 78%;
+  height: calc(100% - 160px); /* Adjust height to account for border radius */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.right-sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.right-sidebar .categories {
+  list-style: none;
+  padding: 0;
+}
+
+.right-sidebar .categories li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #FF8036;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.right-sidebar .categories li:hover {
+  background-color: #FF8036;
 }
 
 .sidebar h2 {
@@ -39,24 +84,40 @@ body {
 .categories li {
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #0056b3;
+  background-color: #FF8036;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
 }
 
 .categories li:hover {
-  background-color: #003f8c;
+  background-color: #FF8036;
 }
 
 /* Main Content Styling */
 .main-content {
-  flex: 1; /* Occupies remaining space */
+  width: 22%; /* Adjust right sidebar width */
+  background-color: #111214;
+  height: 100vh;
+  color: black;
   padding: 20px;
+  left: 25%;
+  width: 49%;
+  border-radius: 12px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow on the left side */
+  position: fixed; /* Fix position to the right */
 }
 
 .main-content h1 {
-  color: #007BFF;
+  color: #FF8036;
+  text-align: center;
+}
+
+.main-content h2 {
+  text-align: center;
+  font-size: smaller;
+  font-weight: 500;
+  color: #FFFFFF;
 }
 
 .workout-button {
