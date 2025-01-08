@@ -1,7 +1,10 @@
 import { Routes } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
-import { AbsComponent } from './abs/abs.component';
-import { LegsComponent } from './legs/legs.component';
+import { AbsComponent } from './categories/abs/abs.component';
+import { BackComponent } from './categories/back/back.component';
+import { BicepsComponent } from './categories/biceps/biceps.component';
+import { ChestComponent } from './categories/chest/chest.component';
+import { LegsComponent } from './categories/legs/legs.component';
 import { CrunchesVideoComponent } from './crunches-video/crunches-video.component';
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component'; // Import CreateAccountComponent
@@ -19,6 +22,21 @@ export const routes: Routes = [
   {
     path: 'abs',
     component: AbsComponent,
+    canActivate: [AuthGuard] // Guarded Route
+  },
+  {
+    path: 'back',
+    component: BackComponent,
+    canActivate: [AuthGuard] // Guarded Route
+  },
+  {
+    path: 'chest',
+    component: ChestComponent,
+    canActivate: [AuthGuard] // Guarded Route
+  },
+  {
+    path: 'biceps',
+    component: BicepsComponent,
     canActivate: [AuthGuard] // Guarded Route
   },
   {
